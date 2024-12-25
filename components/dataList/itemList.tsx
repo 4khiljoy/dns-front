@@ -11,19 +11,23 @@ type Item = {
 }
 
 const ItemList = ({ id }: { id: string }) => {
-    const route = useRouter()
+	const route = useRouter()
 	const fetchData = async () => {
 		const res = await fetch("http://localhost:3001/items", {
 			method: "POST",
-			body: JSON.stringify({ menuId: id }),
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({ id }),
 		})
 		const data = await res.json()
 		return data
 	}
 
 	const [data, setData] = React.useState([])
-	
+
 	useEffect(() => {
+		console.log(id)
 		fetchData().then((data) => setData(data))
 	}, [])
 
@@ -34,7 +38,7 @@ const ItemList = ({ id }: { id: string }) => {
 				return (
 					<div
 						key={item.id}
-                        onClick={() => route.push(`/menu/${item.id}`)}
+						onClick={() => route.push(`/menu/${item.id}`)}
 						className='hover:bg-slate-100 rounded-2xl cursor-pointer p-2'>
 						<div className='flex flex-col md:flex-row gap-5'>
 							<p>Item Name: {item.name}</p>
