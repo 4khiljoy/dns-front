@@ -12,7 +12,7 @@ type Item = {
 const MenuList = () => {
     const route = useRouter()
 	const fetchData = async () => {
-		const res = await fetch("http://localhost:3001/menu", {
+		const res = await fetch("https://dns-back.onrender.com/menu", {
 			method: "GET",
 		})
 		const data = await res.json()

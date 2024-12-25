@@ -19,7 +19,7 @@ export const CreateMenu = () => {
 	const onSubmit: SubmitHandler<Inputs> = async (data) => {
 		console.log(data)
 
-		const res = await fetch("http://localhost:3001/menu-create", {
+		const res = await fetch("https://dns-back.onrender.com/menu-create", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",

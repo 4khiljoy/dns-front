@@ -13,7 +13,7 @@ type Item = {
 const ItemList = ({ id }: { id: string }) => {
 	const route = useRouter()
 	const fetchData = async () => {
-		const res = await fetch("http://localhost:3001/items", {
+		const res = await fetch("https://dns-back.onrender.com/items", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",

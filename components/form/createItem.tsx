@@ -21,7 +21,7 @@ export const CreateItem = ({ id }: { id: string }) => {
 	const onSubmit: SubmitHandler<Inputs> = async (data) => {
 		console.log(data)
         data.menuId = id
-		const res = await fetch("http://localhost:3001/item-create", {
+		const res = await fetch("https://dns-back.onrender.com/item-create", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
