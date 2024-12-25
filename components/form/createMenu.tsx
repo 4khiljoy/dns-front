@@ -54,7 +54,7 @@ export const CreateMenu = () => {
       <p className="text-2xl font-bold uppercase text-white">Create A MENu</p>
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
-          <Label>Menu Name</Label>
+          <Label className="text-white">Menu Name</Label>
           <Input
             placeholder="Menu Name"
             {...register("name", { required: true })}
@@ -64,7 +64,7 @@ export const CreateMenu = () => {
           )}
         </div>
         <div className="flex flex-col gap-2">
-          <Label>Menu Description</Label>
+          <Label className="text-white">Menu Description</Label>
           <Input
             placeholder="Menu Description"
             {...register("description", { required: true })}
@@ -82,7 +82,7 @@ export const CreateMenu = () => {
         )}
 
         <Button disabled={loading} type="submit">
-          {loading ? "saving" : "save"}
+          {loading ? "saving" : "Save"}
         </Button>
       </form>
     </div>
