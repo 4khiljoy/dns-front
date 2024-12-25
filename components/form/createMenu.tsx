@@ -50,8 +50,8 @@ export const CreateMenu = () => {
   };
 
   return (
-    <div className="flex flex-col gap-4 p-5 border-2 shadow-lg m-5 rounded-2xl border-black">
-      <p className="text-2xl font-bold uppercase">Create A MENu</p>
+    <div className="flex flex-col gap-4 p-5 border-2 border-white shadow-lg rounded-2xl">
+      <p className="text-2xl font-bold uppercase text-white">Create A MENu</p>
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
           <Label>Menu Name</Label>

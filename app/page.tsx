@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-[85vh] bg-cover">
+    <div className=" bg-[url('/Rectangle103.png')] bg-cover bg-center">
       <div>
         <CreateMenu />
       </div>

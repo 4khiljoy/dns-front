@@ -7,15 +7,16 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { CiMenuBurger } from "react-icons/ci";
+import Link from "next/link";
 
 const Menu = () => {
   return (
     <div>
       <div className="hidden md:flex gap-4 uppercase">
-        <p className="text-white">HOME</p>
+        <Link href={"/"} className="text-white">HOME</Link>
         <p className="text-blue-500">Menu</p>
         <p className="text-white">Make a Reservation</p>
-        <p className="text-white">Contact Us</p>
+        <Link href={"/contact-us"} className="text-white">Contact Us</Link>
       </div>
       <div className="md:hidden">
         <Sheet>
