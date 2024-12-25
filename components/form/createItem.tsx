@@ -65,7 +65,7 @@ export const CreateItem = ({ id }: { id: string }) => {
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
             <Label>Item Name</Label>
-            <Input
+            <Input className="text-black"
               placeholder="Item Name"
               {...register("name", { required: true })}
             />
@@ -77,7 +77,7 @@ export const CreateItem = ({ id }: { id: string }) => {
           </div>
           <div className="flex flex-col gap-2">
             <Label>Item Description</Label>
-            <Input
+            <Input className="text-black"
               placeholder="Item Description"
               {...register("description", { required: true })}
             />
@@ -89,7 +89,7 @@ export const CreateItem = ({ id }: { id: string }) => {
           </div>
           <div className="flex flex-col gap-2">
             <Label>Item Price</Label>
-            <Input
+            <Input className="text-black"
               step={0.01}
               type="number"
               placeholder="Item Price"
