@@ -12,26 +12,56 @@ import Link from "next/link";
 const Menu = () => {
   return (
     <div>
+      {/* Desktop Menu */}
       <div className="hidden md:flex gap-4 uppercase">
-        <Link href={"/"} className="text-white">HOME</Link>
-        <p className="text-blue-500">Menu</p>
+        <Link href={"/"} className="text-white">
+          HOME
+        </Link>
+        <Link href={"/menulist"} className="text-blue-500">
+          Menu
+        </Link>
         <p className="text-white">Make a Reservation</p>
-        <Link href={"/contact-us"} className="text-white">Contact Us</Link>
+        <Link href={"/contact-us"} className="text-white">
+          Contact Us
+        </Link>
       </div>
+
       <div className="md:hidden">
         <Sheet>
           <SheetTrigger>
-            <CiMenuBurger size={30} className="text-white" />
+            <CiMenuBurger
+              size={30}
+              className="text-white hover:text-blue-500 transition duration-300"
+            />
           </SheetTrigger>
-          <SheetContent>
+          <SheetContent className="bg-gradient-to-b from-gray-800 to-gray-900 text-white">
             <SheetHeader>
-              <SheetTitle>MENU</SheetTitle>
+              <SheetTitle className="text-2xl font-bold text-center text-blue-500 border-b border-gray-600 pb-4">
+                MENU
+              </SheetTitle>
             </SheetHeader>
-            <div className="flex flex-col gap-4 uppercase">
-              <p className="text-black">HOME</p>
-              <p className="text-blue-500">Menu</p>
-              <p className="text-black">Make a Reservation</p>
-              <p className="text-black">Contact Us</p>
+            <div className="flex flex-col items-center gap-6 mt-6">
+              <Link
+                href={"/"}
+                className="text-xl font-medium text-white hover:text-blue-400 transition duration-300"
+              >
+                HOME
+              </Link>
+              <Link
+                href={"/menulist"}
+                className="text-xl font-medium text-blue-500 hover:text-blue-400 transition duration-300"
+              >
+                Menu
+              </Link>
+              <p className="text-xl font-medium text-white hover:text-blue-400 transition duration-300">
+                Make a Reservation
+              </p>
+              <Link
+                href={"/contact-us"}
+                className="text-xl font-medium text-white hover:text-blue-400 transition duration-300"
+              >
+                Contact Us
+              </Link>
             </div>
           </SheetContent>
         </Sheet>
